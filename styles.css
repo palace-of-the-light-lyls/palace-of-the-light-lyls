@@ -2661,7 +2661,8 @@ p  { line-height: 1.9; font-weight: 300; }
 /* ??????????????????????????????????????????
    撌亦??脣漲
    ?????????????????????????????????????? */
-#page-progress {
+#page-progress,
+#page-realm {
   background: var(--paper);
 }
 .progress-wrap {
@@ -2669,7 +2670,8 @@ p  { line-height: 1.9; font-weight: 300; }
   padding-top: clamp(44px,5.5vw,76px);
   padding-bottom: clamp(44px,5.5vw,76px);
 }
-#page-progress .section-kicker {
+#page-progress .section-kicker,
+#page-realm .section-kicker {
   margin-bottom: clamp(24px,3vw,36px);
 }
 .progress-card {
@@ -5300,7 +5302,8 @@ footer {
     min-height: 170px !important;
   }
   /* ?脣漲??section-wrap 銝????嗥? */
-  #page-progress .section-wrap {
+  #page-progress .section-wrap,
+  #page-realm .section-wrap {
     padding-top: clamp(28px, 5vw, 44px);
     padding-bottom: clamp(28px, 5vw, 44px);
   }
