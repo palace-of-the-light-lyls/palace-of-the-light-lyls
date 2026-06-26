@@ -9102,7 +9102,7 @@ footer {
   width: 100% !important;
   height: auto !important;
   min-height: 0 !important;
-  aspect-ratio: auto !important;
+  aspect-ratio: 710 / 431 !important;
   align-self: center !important;
   padding: 0 !important;
   overflow: hidden !important;
@@ -9118,7 +9118,7 @@ footer {
   width: 100% !important;
   height: auto !important;
   min-height: 0 !important;
-  aspect-ratio: auto !important;
+  aspect-ratio: 710 / 431 !important;
   object-fit: contain !important;
   border: 0 !important;
 }
@@ -9126,20 +9126,22 @@ footer {
 @media (min-width: 981px) {
   #prod-water .sd-row.reverse:has(.water-natural-single) {
     direction: ltr !important;
-    grid-template-columns: minmax(0, 1fr) auto !important;
-    height: clamp(300px, 21vw, 340px) !important;
+    grid-template-columns: minmax(0, 3fr) minmax(360px, 2fr) !important;
+    height: auto !important;
     align-items: stretch !important;
   }
 
   #prod-water .sd-row:has(.water-natural-single) > .sd-text {
     grid-column: 1 !important;
-    height: 100% !important;
+    grid-row: 1 !important;
+    height: auto !important;
   }
 
   #prod-water .sd-row:has(.water-natural-single) > .water-natural-single {
     grid-column: 2 !important;
-    width: auto !important;
-    height: 100% !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    height: auto !important;
     aspect-ratio: 710 / 431 !important;
     align-self: stretch !important;
   }
@@ -9721,5 +9723,91 @@ a,
 
   .footer-actions a {
     min-height: 44px;
+  }
+}
+
+/* Product gallery and mobile vertical-flow refinements. */
+@media (max-width: 600px) {
+  body #main-content .product-panel .team-section {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    white-space: normal !important;
+    scroll-snap-type: none !important;
+    padding-right: 20px !important;
+  }
+
+  body #main-content .product-panel .team-section h3::after,
+  body #main-content .product-panel .team-section:has(.team-card + .team-card) h3::after,
+  body #main-content .product-panel .plan-heading::after {
+    content: none !important;
+    display: none !important;
+  }
+
+  body #main-content .product-panel .team-section .team-card {
+    display: grid !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 0 18px !important;
+    white-space: normal !important;
+    scroll-snap-align: none !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-rows: auto 1fr !important;
+  }
+
+  body #main-content .product-panel .team-section .team-card:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  body #main-content .product-panel .team-section .tc-img {
+    min-height: 0 !important;
+    height: 220px !important;
+  }
+
+  body #main-content .product-panel .team-section .tc-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  body #main-content .product-panel .team-section .tc-img-contain img {
+    object-fit: contain !important;
+    padding: 14px !important;
+  }
+
+  body #main-content .product-panel .plan-gallery {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    scroll-snap-type: none !important;
+    margin-inline: 0 !important;
+    padding: 0 !important;
+  }
+
+  body #main-content .product-panel .plan-card {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: none !important;
+    scroll-snap-align: none !important;
+  }
+
+  body #main-content .product-panel .plan-card .plan-wrap {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
+  }
+
+  body #main-content .product-panel .plan-card .plan-wrap img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: contain !important;
   }
 }
